@@ -1,0 +1,17 @@
+{
+  "name": "belajar-express-api",
+  "version": "1.0.0",
+  "description": "Belajar membuat API menggunakan framework Express JS",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Tatang Bukhori",
+  "license": "ISC",
+  "dependencies": {
+    "body-parser": "^2.2.0",
+    "express": "^5.1.0",
+    "express-validator": "^7.2.1",
+    "mysql": "^2.18.1"
+  }
+}
