@@ -7,8 +7,14 @@ const port = 3000
 //     res.send('Hello World')
 // })
 
+// import library CORS
+const cors = require('cors')
+
+// use cors
+app.use(cors())
+
 // import body parser
-const bodyParser = require('body-parser');
+const bodyParser = require('body-parser')
 
 // parse application/x-www-form-urlencoded
 app.use(bodyParser.urlencoded())
