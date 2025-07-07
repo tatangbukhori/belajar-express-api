@@ -29,8 +29,8 @@ router.get('/', function (req, res) {
 // STORE POSTS
 router.post('/store', [
     // validation
-    body('title').notEmpty(),
-    body('content').notEmpty()
+    body('title').trim().notEmpty().withMessage('Title is required').isLength({ min:3 }).withMessage('Title minimum 3 character'),
+    body('content').trim().notEmpty().withMessage('Content is required')
 
 ], (req, res) => {
     const errors = validationResult(req);
@@ -97,8 +97,8 @@ router.get('/:id', function (req, res) {
 // UPDATE POST
 router.patch('/update/:id', [
     // validation
-    body('title').notEmpty(),
-    body('content').notEmpty()
+    body('title').trim().notEmpty().withMessage('Title is required').isLength({ min:3 }).withMessage('Title minimum 3 character'),
+    body('content').trim().notEmpty().withMessage('Content is required')
 ], (req, res) => {
     const errors = validationResult(req);
 
